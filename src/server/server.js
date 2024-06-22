@@ -27,8 +27,7 @@ app.get('/canciones', (req, res) => {
 app.post('/canciones', (req, res) => {
   try {
     const { id, titulo, artista, tono } = req.body
-    console.log(req.body, titulo)
-    if (id === undefined || titulo === undefined || artista === undefined || tono === '') {
+    if (id === undefined || titulo === undefined || artista === undefined || tono === undefined) {
       throw new Error('Todos los campos son obligatorios')
     }
     const cancion = req.body
