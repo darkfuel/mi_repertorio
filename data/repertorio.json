@@ -1,0 +1,13 @@
+[
+ {
+  "cancion":"fuego",
+  "artista":"juan",
+  "tono":"pb"
+},
+
+{
+ "cancion":"hielo",
+ "artista":"pedro",
+ "tono":"ph"
+}
+]

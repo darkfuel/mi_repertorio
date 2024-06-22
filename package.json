@@ -1,0 +1,26 @@
+{
+  "name": "mi_repertorio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Abel Rivas FS",
+  "license": "ISC",
+  "description": "Mi repertorio de canciones",
+  "type": "module",
+  "eslintConfig": {
+    "extends": [
+      "./node_modules/standard/eslintrc.json"
+    ]
+  },
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4",
+    "standard": "^17.1.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}
