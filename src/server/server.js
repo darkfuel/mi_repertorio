@@ -9,8 +9,7 @@ app.use(express.json())
 app.get('/canciones', (req, res) => {
   // obtener data
   try {
-    const data = fs.readFileSync('data/repertorio.json')
-    const canciones = JSON.parse(data)
+    const canciones = JSON.parse(fs.readFileSync('data/repertorio.json'))
     res.status(200).json(canciones)
   } catch (error) {
     res.status(404).send('Error al obtener datos')
@@ -18,11 +17,15 @@ app.get('/canciones', (req, res) => {
 })
 
 app.post('/canciones', (req, res) => {
-  // obtener data
-  // modificar data
-  // guardar data
   try {
-    console.log(req.body)
+    const cancion = req.body
+    // obtener data
+    const canciones = JSON.parse(fs.readFileSync('data/repertorio.json'))
+    // modificar data
+    canciones.push(cancion)
+    // guardar data
+    fs.writeFileSync('data/repertorio.json', JSON.stringify(canciones))
+    res.status(200).json({ message: 'Canción agregada' })
   } catch (error) {
     res.status(400).send(`No es posible crear la canción:   ${error.message}`)
   }

@@ -1,13 +1,1 @@
-[
- {
-  "cancion":"fuego",
-  "artista":"juan",
-  "tono":"pb"
-},
-
-{
- "cancion":"hielo",
- "artista":"pedro",
- "tono":"ph"
-}
-]
+[{"id":"123","titulo":"Cancion Bonita","artistata":"Franco","tono":"GH"}]
