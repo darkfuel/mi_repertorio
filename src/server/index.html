@@ -149,14 +149,21 @@
   }
 
   function editarCancion(id) {
-    axios
+    let data = {
+      id,
+      titulo: cancion.value,
+      artista: artista.value,
+      tono: tono.value,
+    };
+    data.titulo === '' || data.artista === '' || data.tono === '' ? alert('Todos los campos son obligatorios')
+    : axios
       .put(url + "/" + id, {
         id,
         titulo: cancion.value,
         artista: artista.value,
         tono: tono.value,
       })
-      .then(() => {
+     .then(() => {
         getData();
         document.getElementById("agregar").style.display = "block";
         document.getElementById("editar").style.display = "none";
